@@ -5,7 +5,7 @@ var __wpo = {
       "/"
     ],
     "additional": [
-      "/main.f1ac2f15ab147610c194.chunk.js",
+      "/main.2459c1b6ef27ea2a370c.chunk.js",
       "/npm.core-js.1971e596789b90bb6eaa.chunk.js",
       "/npm.dom-helpers.e19a75a7f183fe1331c6.chunk.js",
       "/npm.ethersproject.f4f211fc4aed2a2fbef9.chunk.js",
@@ -20,7 +20,7 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
-    "e47d68f9d1f324ac4aaaf338ce3f00aec6c23e18": "/main.f1ac2f15ab147610c194.chunk.js",
+    "ade38d69759beb6e4ad71ff27edac2cf4ca7e775": "/main.2459c1b6ef27ea2a370c.chunk.js",
     "0eb16fb410ac69aef209d7c59330837d210e0157": "/npm.core-js.1971e596789b90bb6eaa.chunk.js",
     "2ce5152b037b8614068186f22154497efc228169": "/npm.dom-helpers.e19a75a7f183fe1331c6.chunk.js",
     "e13dd4aec2946b7ccfeb09ec998a148b0a67d89a": "/npm.ethersproject.f4f211fc4aed2a2fbef9.chunk.js",
@@ -31,11 +31,11 @@ var __wpo = {
     "d69ccd2e39681b856e5c7e34047f9442d2d94ebb": "/npm.react-select-search.20de7457f6421fcea38c.chunk.js",
     "ed2bff4b9f18fa9d82fb6e89d434f3ef2dc4c149": "/npm.web3-eth-accounts.b1a136708d6e4d13ced3.chunk.js",
     "375047f3e9ebb8da5cbccde0ba8be6834e108621": "/runtime.6c95abf7ac0f915e0c58.js",
-    "9fdd406e1336c71287d60a498d88345ec2abde92": "/"
+    "32da7bc641d6dc835917001e7b91c19bc69fe993": "/"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "5/10/2021, 3:40:07 PM",
+  "version": "5/12/2021, 8:14:07 PM",
   "name": "webpack-offline",
   "pluginVersion": "5.0.6",
   "relativePaths": false

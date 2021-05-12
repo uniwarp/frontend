@@ -121,11 +121,21 @@ nav {
   .navbar-collapse {
     justify-content: space-between;
   }
+  button.adduwr {
+    font-size: 0.8rem;
+    // vertical-align: bottom;
+    margin-top: 0.4rem;
+    margin-right: 1rem;
+    i {
+      vertical-align: middle;
+      font-weight: bold;
+    }
+  }
   li a {
     // font-size: 1.2rem;
     line-height: 2rem;
     text-decoration: none;
-    margin-right: 30px;
+    margin-right: 20px;
     color: var(--dark);
     &.active {
       font-weight: 800;
@@ -660,6 +670,7 @@ footer {
     }
   }
 }
+
 .accountWrapper {
   position: relative;
   display: flex;
@@ -675,6 +686,7 @@ footer {
     color: var(--primary) !important;
     background-color: rgba(#0145d8, 0.1);
   }
+
   .identicon {
     border-radius: 4rem;
   }
