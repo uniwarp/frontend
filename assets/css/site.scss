@@ -63,6 +63,10 @@ body {
   .bgicon {
     display: none;
   }
+  .note {
+    position: relative !important;
+    margin-left: 1rem;
+  }
 }
 
 .modal-body {
@@ -117,15 +121,16 @@ h4 {
 
 nav {
   background: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
   .navbar-collapse {
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   button.adduwr {
     font-size: 0.8rem;
     // vertical-align: bottom;
     margin-top: 0.4rem;
     margin-right: 1rem;
+    margin-left: auto;
     i {
       vertical-align: middle;
       font-weight: bold;
@@ -212,8 +217,13 @@ nav {
       .jeoWZW {
         text-align: center;
       }
+      .adduwr,
       .btneffect {
-        margin: 1rem auto;
+        display: block;
+        margin: 1rem auto 0.4rem auto;
+      }
+      .accountWrapper {
+        margin-bottom: 1rem;
       }
       .claim {
         display: block;
@@ -670,34 +680,84 @@ footer {
     }
   }
 }
-
+.accountAddress {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--dark) !important;
+  background-color: var(--lightgrey);
+  img {
+    height: 1rem;
+    margin-right: 0.3rem;
+  }
+  b {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+  }
+}
+.accountBalance {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--primary) !important;
+  background-color: var(--lightblue);
+  img {
+    height: 1.2rem;
+    margin-right: 0.3rem;
+  }
+}
 .accountWrapper {
   position: relative;
   display: flex;
   align-items: center;
   justify-self: end;
   cursor: pointer;
-  padding: 15px;
-  .badge.uwr {
-    font-size: 1.2rem;
-    padding: 0.8rem 1.2rem;
-    margin-right: 1rem;
-    border-radius: 0.8rem;
-    color: var(--primary) !important;
-    background-color: rgba(#0145d8, 0.1);
-  }
+  height: 70px;
 
-  .identicon {
-    border-radius: 4rem;
+  // border: 2px solid red;
+
+  .left {
+    height: calc(80% - 2px);
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-row-gap: 2px;
+    align-content: center;
   }
-  .accountAddress {
-    display: block;
-    overflow: hidden;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-weight: bold;
-    text-overflow: ellipsis;
-    justify-self: flex-end;
+  .right {
+    height: 85%;
+    padding: 0 0.8rem 0 0;
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+  }
+}
+.identicon {
+  border-radius: 0.6rem !important;
+  margin-right: 0.3rem;
+  border: 4px solid var(--lightblue);
+  box-sizing: content-box;
+}
+.dropdownbtn {
+  width: 2rem;
+  height: 2rem;
+  background: var(--dark);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  i {
+    color: #fff;
+    margin: 2px 2px 0 0;
   }
 }
 
@@ -713,8 +773,6 @@ footer {
     flex-basis: 100%;
     align-items: center;
     align-content: center;
-    // flex: 1 1 160px;
-    // templa
 
     &.header {
       font-weight: bold;
@@ -781,6 +839,28 @@ footer {
       text-align: right;
     }
   }
+  @include media-breakpoint-down(sm) {
+    .chain {
+      flex-direction: column;
+      img,
+      h3 {
+        display: inline-block;
+      }
+      a {
+        width: 100%;
+        white-space: wrap;
+        i {
+          vertical-align: middle;
+        }
+        code {
+          width: 90%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: inline-block;
+        }
+      }
+    }
+  }
 }
 
 .airdropform {
@@ -800,16 +880,130 @@ footer {
 }
 
 .connectModal {
-  .modal-header .close {
-    padding: 1rem 1rem;
-    margin: -0.8rem -0.5rem -1rem auto;
-    font-size: 2rem;
+  display: flex !important;
+  align-items: flex-start !important;
+  flex-direction: row !important;
+  justify-content: flex-end !important;
+
+  &.modal-dialog {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0rem auto !important;
+  }
+  &.modal-dialog-centered {
+    min-height: 100% !important;
+  }
+
+  .modal-header {
+    border-bottom: none;
+
+    .close {
+      padding: 1.3rem 1.3rem;
+      margin: -0.3rem -0.3rem 0 0;
+      span {
+        display: none;
+      }
+    }
+  }
+  .dropdownbtn {
+    position: absolute;
+    right: 1rem;
+    // z-index: 100;
+    background: var(--lightgrey);
+    pointer-events: none;
+    i {
+      color: var(--darkgrey);
+    }
+  }
+  .identicon {
+    vertical-align: middle;
+    border-radius: 0.6rem !important;
+    margin-right: 1rem;
+    border: 4px solid var(--lightblue);
+    box-sizing: content-box;
   }
   .modal-content {
     border-radius: 1.5rem;
     border: none;
+    width: 400px;
+    box-shadow: 0px 3px 10px rgba(1, 69, 216, 0.14);
+    border-radius: 12px;
+    margin-top: 0.7rem;
+    margin-right: 0.8rem;
+
     .modal-title {
       font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    .modal-body {
+      padding-top: 0;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-column-gap: 5px;
+      .btn {
+        font-size: 0.8rem;
+        min-height: 2.2rem;
+        line-height: 1.5rem;
+      }
+    }
+    .disconnect {
+      display: block;
+      margin: 0 auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .accountBalance {
+      font-size: 1.2rem;
+      min-height: 3rem;
+    }
+    .accountBalance,
+    .accountAddress {
+      min-height: 2.4rem;
+      margin: 0.3rem 0 0.5rem 0;
+    }
+  }
+}
+.modal {
+  position: absolute;
+}
+.modal-backdrop {
+  background: rgba(#ffffff, 0);
+}
+@include media-breakpoint-down(sm) {
+  .connectModal {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .modal {
+    position: fixed;
+  }
+  .modal-backdrop {
+    background: var(--primary);
+  }
+  .close {
+    padding: 0.8rem 1rem !important;
+    margin: -0.8rem -0.8rem 0 0 !important;
+    font-size: 2rem !important;
+    span {
+      display: block !important;
+    }
+  }
+  .modal-content {
+    width: calc(100% - 1rem) !important;
+    margin: 0 0.5rem !important;
+    border-radius: 18px !important;
+  }
+  .dropdownbtn {
+    display: none !important;
+  }
+  .accountWrapper {
+    justify-content: center;
+    .right {
+      display: none !important;
     }
   }
 }
