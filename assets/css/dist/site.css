@@ -7957,7 +7957,7 @@ nav {
     nav li a:hover {
       color: var(--primary); }
   nav li.airdrop a {
-    color: #ff258e; }
+    color: #ff5722; }
   nav .navbar-toggler {
     margin-top: 0.2rem; }
     nav .navbar-toggler i {
@@ -8023,10 +8023,10 @@ main {
       margin-bottom: 2rem; }
     main .content .airdrop {
       margin-left: 1rem;
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 700;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
       background: #ff258e;
       color: #fff;
       box-shadow: 0 0 0 rgba(255, 37, 142, 0.7);
@@ -8476,6 +8476,59 @@ footer {
     border-color: #ff258e;
     background: linear-gradient(87.63deg, #df1f7b 0%, #ff258e 100%);
     box-shadow: 5px 0px #ff89c2; }
+  .airdropform .btneffect.green {
+    background: #2cf0a9;
+    border-color: #2cf0a9;
+    background: linear-gradient(87.63deg, #27da98 0%, #2cf0a9 100%);
+    box-shadow: 5px 0px #5affc3; }
+
+.get .card {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  margin-bottom: 1rem; }
+  .get .card .header {
+    background: grey;
+    width: 100%;
+    height: 130px; }
+  .get .card .card-content {
+    padding: 1rem; }
+    .get .card .card-content p {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+    .get .card .card-content p.muted {
+      color: var(--darkgrey); }
+  .get .card .xlogo {
+    max-width: 75%;
+    max-height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%; }
+
+.get .pancake .header {
+  background: #f5ede5; }
+  .get .pancake .header .xlogo {
+    transform: translate(-50%, -72px); }
+
+.get .honey .header {
+  background: #2e3437; }
+  .get .honey .header .xlogo {
+    transform: translate(-50%, -85px); }
+
+.get .sushi .header {
+  background: #161621; }
+  .get .sushi .header .xlogo {
+    transform: translate(-50%, -80px); }
+
+.get .quick .header {
+  background: #cde6fe; }
+  .get .quick .header .xlogo {
+    transform: translate(-50%, -80px); }
+
+.get .fuse .header {
+  background: #052235; }
+  .get .fuse .header .xlogo {
+    transform: translate(-50%, -80px); }
 
 .connectModal {
   display: flex !important;
