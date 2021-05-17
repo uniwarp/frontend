@@ -7957,7 +7957,7 @@ nav {
     nav li a:hover {
       color: var(--primary); }
   nav li.airdrop a {
-    color: #ff5722; }
+    color: #ff3721; }
   nav .navbar-toggler {
     margin-top: 0.2rem; }
     nav .navbar-toggler i {
@@ -8476,6 +8476,11 @@ footer {
     border-color: #ff258e;
     background: linear-gradient(87.63deg, #df1f7b 0%, #ff258e 100%);
     box-shadow: 5px 0px #ff89c2; }
+  .airdropform .btneffect.purple {
+    background: #ff3721;
+    border-color: #ff3721;
+    background: linear-gradient(87.63deg, #e73420 0%, #ff3721 100%);
+    box-shadow: 5px 0px #ff4e3a; }
   .airdropform .btneffect.green {
     background: #2cf0a9;
     border-color: #2cf0a9;
